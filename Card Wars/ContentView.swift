@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var cardP = "back"
+    @State var cardC = "back"
+    
+    @State var scorePlayer = 0
+    @State var scoreCpu = 0
+    
     var body: some View {
         
         ZStack(){
@@ -21,13 +28,20 @@ struct ContentView: View {
                 Spacer()
                 HStack(){
                     Spacer()
-                    Image("card2")
+                    Image(cardP)
                     Spacer()
-                    Image("card3")
+                    Image(cardC)
                     Spacer()
                 }
                 Spacer()
-                Image("button")
+                
+                Button {
+                    deal()
+                } label: {
+                    Image("button")
+                }
+
+                
                 Spacer()
                 HStack(){
                     Spacer()
@@ -35,20 +49,42 @@ struct ContentView: View {
                         Text("Player")
                             .font(.headline)
                             .padding(.bottom,10)
-                        Text("0").font(.largeTitle)
+                        Text(String(scorePlayer))
+                            .font(.largeTitle)
                     }
                     Spacer()
                     VStack(){
                         Text("CPU")
                             .font(.headline)
                             .padding(.bottom,10)
-                        Text("0").font(.largeTitle)
+                        Text(String(scoreCpu))
+                            .font(.largeTitle)
                     }
                     Spacer()
                 }
                 .foregroundColor(.white)
                 Spacer()
             }
+        }
+    }
+    
+    func deal(){
+        //Randomizing
+        let playerValue = Int.random(in: 2...14)
+        let cpuValue = Int.random(in: 2...14)
+        //Assigning to card string
+        cardP = "card" + String(playerValue)
+        cardC = "card" + String(cpuValue)
+        //updating score
+        if playerValue > cpuValue{
+            scorePlayer+=1
+        }
+        else if cpuValue > playerValue{
+            scoreCpu+=1
+        }
+        else{
+            scoreCpu+=1
+            scorePlayer+=1
         }
     }
 }
