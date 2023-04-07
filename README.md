@@ -15,9 +15,7 @@ This is an iOS game that is made using SwiftUI and pits the player against the c
 <br>
 <p align="middle">Showcasing the starting of the game and how it progress</p>
 <p float="left" align="middle">
-  <img src="https://user-images.githubusercontent.com/72563740/226442353-f8a33b5b-8b3d-43d0-aee8-5e277c695a14.png" width=200>
-  <img src="https://user-images.githubusercontent.com/72563740/226442386-4fb39230-d0e8-47da-b3a7-3003ba7cd484.png" width=200>
-  <img src="https://user-images.githubusercontent.com/72563740/226442398-e19633f5-42ec-4d96-81ce-01e32aadf774.png" width=200>
+  <img src="https://user-images.githubusercontent.com/72563740/230607732-3d958391-9591-443d-947d-5ffee311517e.png">
 </p>
 
 
